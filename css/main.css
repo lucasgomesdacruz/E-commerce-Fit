@@ -23,11 +23,10 @@
 .main-card {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     max-width: 500px;
     color: black;
     border-right: 3px solid black;
-    cursor: pointer;
 }
 
 .main-card:nth-child(4), .main-card:nth-child(8) {
@@ -36,13 +35,53 @@
 
 .main-card img {
     max-width: 300px;
+    transition: transform 0.5s ease;
+}
+
+.main-card img:hover {
+    transform: scale(1.05);
 }
 
 .main-card h2 {
-    font-size: 24px;
+    font-size: 20px;
     text-transform: uppercase;
 }
-.main-card p {
-    font-size: 24px;
-    text-transform: uppercase;
+
+.main-card-price {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 40px;
 }
+
+.main-card-price p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.main-card-price i {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: cadetblue;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+} 
+
+.main-card-price-ativo, i.ativo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    color: cadetblue;
+    padding: 5px;
+    cursor: pointer;
+} 
+
